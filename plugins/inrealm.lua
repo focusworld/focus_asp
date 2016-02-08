@@ -460,20 +460,20 @@ function run(msg, matches)
 		chat_info(receiver, returnids, {receiver=receiver})
 	end
 
-    if matches[1] == 'newgp' and matches[2] then
+    if matches[1] == 'creategroup' and matches[2] then
         group_name = matches[2]
-        group_type = 'gp'
-        return new_gp(msg)
+        group_type = 'group'
+        return create_group(msg)
     end
     
     if not is_sudo(msg) or not is_admin(msg) and not is_realm(msg) then
 		return  --Do nothing
 	end
 
-    if matches[1] == 'newrealm' and matches[2] then
+    if matches[1] == 'createrealm' and matches[2] then
         group_name = matches[2]
         group_type = 'realm'
-        return new_realm(msg)
+        return create_realm(msg)
     end
 
     local data = load_data(_config.moderation.data)
@@ -658,8 +658,8 @@ end
 
 return {
   patterns = {
-    "^[!/](newgp) (.*)$",
-    "^[!/](newrealm) (.*)$",
+    "^[!/](creategroup) (.*)$",
+    "^[!/](createrealm) (.*)$",
     "^[!/](setabout) (%d+) (.*)$",
     "^[!/](setrules) (%d+) (.*)$",
     "^[!/](setname) (.*)$",
