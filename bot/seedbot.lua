@@ -240,10 +240,10 @@ function create_config( )
     "anti-link",
     "chat",
     "welcome",
-    "locklink",
     "tagall",
     "bye",
-    "info_fa"
+    "info_fa",
+    "anti-link"
     },
     sudo_users = {157187288,179286096,174602122,3,tonumber(our_id)},--Sudo users
     disabled_channels = {},
