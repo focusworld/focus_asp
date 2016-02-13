@@ -1,5 +1,6 @@
 local function run(msg)
 if msg.text == "me" then
+end
       if  is_sudo(msg) then
   return "you're sudo"
 end
